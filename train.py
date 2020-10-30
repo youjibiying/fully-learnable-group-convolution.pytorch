@@ -45,7 +45,7 @@ def train(checkpoint_path, num_groups, use_standard_group_convolutions, checkpoi
     testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
     testloader = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=2)
 
-    for epoch_id in range(start_epoch, 400):
+    for epoch_id in range(start_epoch, 2):
         print('Epoch: {}'.format(epoch_id))
         if num_epochs_to_dump_net is not None:
             if epoch_id % num_epochs_to_dump_net == 0:
